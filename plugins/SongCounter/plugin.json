@@ -1,11 +1,11 @@
 {
     "id": "song_counter",
     "name": "SongCounter",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "min_core_version": "2.5.0",
     "author": "NeptuneHub",
-    "description": "Counts analyzed songs. A settings page (opened from the Manage Plugins Settings button) lets you choose which embeddings to count (Musicnn, DCLAP, GTE lyrics).",
-    "changelog": "Saving settings returns to the Manage Plugins page.",
+    "description": "Counts analyzed songs and shows them as a bar chart. A settings page (opened from the Manage Plugins Settings button) lets you choose which embeddings to count (Musicnn, DCLAP, GTE lyrics).",
+    "changelog": "Draw the counts as a bar chart using matplotlib (installed via the plugin requirements).",
     "imageUrl": "",
-    "requirements": []
+    "requirements": ["matplotlib"]
 }

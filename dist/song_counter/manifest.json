@@ -6,6 +6,14 @@
   "imageUrl": "",
   "versions": [
     {
+      "version": "1.5.0",
+      "changelog": "Declare the plugin as Flask-only (targets) so worker containers skip its code and matplotlib dependency.",
+      "min_core_version": "2.5.0",
+      "sourceUrl": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI-plugins/main/dist/song_counter/song_counter_1.5.0.zip",
+      "checksum": "13659aab7557ecce9bd399292af55688",
+      "timestamp": "2026-07-06T16:39:55Z"
+    },
+    {
       "version": "1.4.0",
       "changelog": "Draw the counts as a bar chart using matplotlib (installed via the plugin requirements).",
       "min_core_version": "2.5.0",

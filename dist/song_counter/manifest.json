@@ -1,10 +1,18 @@
 {
   "id": "song_counter",
   "name": "SongCounter",
-  "description": "Counts analyzed songs. A settings page (opened from the Manage Plugins Settings button) lets you choose which embeddings to count (Musicnn, DCLAP, GTE lyrics).",
+  "description": "Counts analyzed songs and shows them as a bar chart. A settings page (opened from the Manage Plugins Settings button) lets you choose which embeddings to count (Musicnn, DCLAP, GTE lyrics).",
   "author": "NeptuneHub",
   "imageUrl": "",
   "versions": [
+    {
+      "version": "1.4.0",
+      "changelog": "Draw the counts as a bar chart using matplotlib (installed via the plugin requirements).",
+      "min_core_version": "2.5.0",
+      "sourceUrl": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI-plugins/main/dist/song_counter/song_counter_1.4.0.zip",
+      "checksum": "eb3a2d2d3eea4db1f7dfa4d952c22c74",
+      "timestamp": "2026-07-06T11:28:33Z"
+    },
     {
       "version": "1.3.0",
       "changelog": "Saving settings returns to the Manage Plugins page.",

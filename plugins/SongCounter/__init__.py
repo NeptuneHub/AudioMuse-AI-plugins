@@ -1,13 +1,20 @@
+import base64
+import io
+
 from flask import Blueprint, request, redirect
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 from plugin.api import get_db, get_setting, set_setting, render_page, manage_plugins_url
 
 bp = Blueprint('song_counter', __name__)
 
 SOURCES = [
-    ('musicnn', 'Musicnn embedding', 'embedding'),
-    ('dclap', 'DCLAP embedding', 'clap_embedding'),
-    ('gte', 'GTE embedding (lyrics)', 'lyrics_embedding'),
+    ('musicnn', 'Musicnn', 'embedding'),
+    ('dclap', 'DCLAP', 'clap_embedding'),
+    ('gte', 'GTE lyrics', 'lyrics_embedding'),
 ]
 
 
@@ -20,6 +27,17 @@ def _count(table_name):
     return total
 
 
+def _bar_chart(labels, values):
+    fig, ax = plt.subplots(figsize=(6, 3))
+    ax.bar(labels, values, color='#2563eb')
+    ax.set_ylabel('songs')
+    fig.tight_layout()
+    buf = io.BytesIO()
+    fig.savefig(buf, format='png', dpi=100)
+    plt.close(fig)
+    return base64.b64encode(buf.getvalue()).decode('ascii')
+
+
 @bp.route('/')
 def home():
     selected = get_setting('sources', [])
@@ -30,11 +48,15 @@ def home():
                 rows.append((label, _count(table_name)))
     else:
         rows.append(('Total analyzed songs', _count('score')))
+    chart = _bar_chart([r[0] for r in rows], [r[1] for r in rows])
     items = ''.join(
         f'<li style="margin:.3rem 0;"><strong>{label}:</strong> {count}</li>'
         for label, count in rows
     )
-    body = f'<ul style="list-style:none;padding:0;font-size:1.2rem;">{items}</ul>'
+    body = (
+        f'<img src="data:image/png;base64,{chart}" alt="Song counts" style="max-width:100%;height:auto;">'
+        f'<ul style="list-style:none;padding:0;font-size:1.1rem;margin-top:1rem;">{items}</ul>'
+    )
     return render_page(body, title='SongCounter')
 
 

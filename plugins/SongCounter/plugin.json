@@ -1,0 +1,11 @@
+{
+    "id": "song_counter",
+    "name": "SongCounter",
+    "version": "1.0.0",
+    "min_core_version": "2.5.0",
+    "author": "NeptuneHub",
+    "description": "Shows how many songs have been analyzed.",
+    "changelog": "Initial release.",
+    "imageUrl": "",
+    "requirements": []
+}

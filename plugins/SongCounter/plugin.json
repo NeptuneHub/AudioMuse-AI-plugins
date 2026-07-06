@@ -1,11 +1,11 @@
 {
     "id": "song_counter",
     "name": "SongCounter",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "min_core_version": "2.5.0",
     "author": "NeptuneHub",
-    "description": "Shows how many songs have been analyzed.",
-    "changelog": "Initial release.",
+    "description": "Counts analyzed songs. A settings page lets you choose which embeddings to count (Musicnn, DCLAP, GTE lyrics).",
+    "changelog": "Add a settings page with embedding checkboxes and render pages inside the app layout so the navigation menu stays.",
     "imageUrl": "",
     "requirements": []
 }

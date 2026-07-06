@@ -2,17 +2,17 @@
   "plugins": [{
   "id": "song_counter",
   "name": "SongCounter",
-  "description": "Shows how many songs have been analyzed.",
+  "description": "Counts analyzed songs. A settings page lets you choose which embeddings to count (Musicnn, DCLAP, GTE lyrics).",
   "author": "NeptuneHub",
   "imageUrl": "",
   "versions": [
     {
-      "version": "1.0.0",
-      "changelog": "Initial release.",
+      "version": "1.1.0",
+      "changelog": "Add a settings page with embedding checkboxes and render pages inside the app layout so the navigation menu stays.",
       "min_core_version": "2.5.0",
-      "sourceUrl": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI-plugins/main/dist/song_counter/song_counter_1.0.0.zip",
-      "checksum": "2406cadad045d78073c14a9aeff9fd0e",
-      "timestamp": "2026-07-06T09:25:50Z"
+      "sourceUrl": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI-plugins/main/dist/song_counter/song_counter_1.1.0.zip",
+      "checksum": "bff1a317245b628b4ea64525120ef8ae",
+      "timestamp": "2026-07-06T09:46:30Z"
     }
   ]
 }]

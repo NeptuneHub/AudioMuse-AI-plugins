@@ -11,7 +11,7 @@
   ],
   "versions": [
     {
-      "version": "1.5.0",
+      "version": "1.5.1",
       "min_core_version": "2.5.0",
       "changelog": "Declare the plugin as Flask-only (targets) so worker containers skip its code and matplotlib dependency.",
       "imageUrl": "",

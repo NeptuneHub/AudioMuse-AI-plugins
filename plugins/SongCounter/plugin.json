@@ -1,12 +1,16 @@
 {
-    "id": "song_counter",
-    "name": "SongCounter",
-    "version": "1.5.0",
-    "min_core_version": "2.5.0",
-    "author": "NeptuneHub",
-    "description": "Counts analyzed songs and shows them as a bar chart. A settings page (opened from the Manage Plugins Settings button) lets you choose which embeddings to count (Musicnn, DCLAP, GTE lyrics).",
-    "changelog": "Declare the plugin as Flask-only (targets) so worker containers skip its code and matplotlib dependency.",
-    "imageUrl": "",
-    "targets": ["flask"],
-    "requirements": ["matplotlib"]
+  "id": "song_counter",
+  "name": "SongCounter",
+  "author": "NeptuneHub",
+  "description": "Counts analyzed songs and shows them as a bar chart. A settings page (opened from the Manage Plugins Settings button) lets you choose which embeddings to count (Musicnn, DCLAP, GTE lyrics).",
+  "targets": ["flask"],
+  "requirements": ["matplotlib"],
+  "versions": [
+    {
+      "version": "1.5.0",
+      "min_core_version": "2.5.0",
+      "changelog": "Declare the plugin as Flask-only (targets) so worker containers skip its code and matplotlib dependency.",
+      "imageUrl": ""
+    }
+  ]
 }

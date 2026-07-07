@@ -3,14 +3,20 @@
   "name": "SongCounter",
   "author": "NeptuneHub",
   "description": "Counts analyzed songs and shows them as a bar chart. A settings page (opened from the Manage Plugins Settings button) lets you choose which embeddings to count (Musicnn, DCLAP, GTE lyrics).",
-  "targets": ["flask"],
-  "requirements": ["matplotlib"],
+  "targets": [
+    "flask"
+  ],
+  "requirements": [
+    "matplotlib"
+  ],
   "versions": [
     {
       "version": "1.5.0",
       "min_core_version": "2.5.0",
       "changelog": "Declare the plugin as Flask-only (targets) so worker containers skip its code and matplotlib dependency.",
-      "imageUrl": ""
+      "imageUrl": "",
+      "sourceUrl": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI-plugins/main/dist/song_counter/song_counter_1.5.0.zip",
+      "checksum": "312365f0f8587b0f45e0ef1be31a9977"
     }
   ]
 }

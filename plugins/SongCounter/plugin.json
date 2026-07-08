@@ -7,6 +7,13 @@
     "matplotlib"
   ],
   "versions": [
+      {
+      "version": "1.7.1",
+      "min_core_version": "2.5.0",
+      "changelog": "Add the index_log cron task: an hourly snapshot of the Musicnn, DCLAP and GTE index sizes, kept to the last 10 rows and shown on the page. Ships disabled; enable it in Scheduled Tasks.",
+      "imageUrl": "",
+      "sourceUrl": ""
+    },
     {
       "version": "1.7.0",
       "min_core_version": "2.5.0",

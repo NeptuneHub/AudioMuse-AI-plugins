@@ -3,29 +3,20 @@
   "name": "SongCounter",
   "author": "NeptuneHub",
   "description": "Counts analyzed songs as a bar chart, and uses the on_song_analyzed worker hook to show a per-run count of songs analyzed plus the full hook payload of the last analyzed song.",
-  "requirements": [
-    "matplotlib"
-  ],
+  "requirements": ["matplotlib"],
   "versions": [
+    {
+      "version": "1.6.2",
+      "min_core_version": "2.5.0",
+      "changelog": "Render dict fields of the last-song detail (like analysis.moods) one entry per line with rounded values, so long fields wrap instead of overflowing the page.",
+      "imageUrl": ""
+    },
     {
       "version": "1.6.1",
       "min_core_version": "2.5.0",
       "changelog": "Fix the last-song detail table overflowing the page: fixed table layout with a pinned key column and wrapping values.",
-      "imageUrl": "",
       "sourceUrl": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI-plugins/main/dist/song_counter/song_counter_1.6.1.zip",
       "checksum": "72296001009bf9d42c6aa6913166ecec"
-    },
-    {
-      "version": "1.6.0",
-      "min_core_version": "2.5.0",
-      "changelog": "Use the on_song_analyzed worker hook: show a per-run count of analyzed songs (reset by run_id) and the last song's full hook payload under the chart. Runs on both containers now (the hook needs the worker).",
-      "imageUrl": ""
-    },
-    {
-      "version": "1.5.0",
-      "min_core_version": "2.5.0",
-      "changelog": "Declare the plugin as Flask-only (targets) so worker containers skip its code and matplotlib dependency.",
-      "imageUrl": ""
     }
   ]
 }

@@ -193,7 +193,7 @@ def _index_log_html():
     if not rows:
         return html_out + (
             '<p>No snapshot yet. Enable the plugin.song_counter.index_log schedule in '
-            'Administration &gt; Scheduled Tasks, or press its Run now button.</p>'
+            'Administration &gt; Scheduled Tasks.</p>'
         )
     header = (
         '<tr>'

@@ -2,21 +2,20 @@
   "id": "song_counter",
   "name": "SongCounter",
   "author": "NeptuneHub",
-  "description": "Counts analyzed songs and shows them as a bar chart. A settings page (opened from the Manage Plugins Settings button) lets you choose which embeddings to count (Musicnn, DCLAP, GTE lyrics).",
-  "targets": [
-    "flask"
-  ],
-  "requirements": [
-    "matplotlib"
-  ],
+  "description": "Counts analyzed songs as a bar chart, and uses the on_song_analyzed worker hook to show a per-run count of songs analyzed plus the full hook payload of the last analyzed song.",
+  "requirements": ["matplotlib"],
   "versions": [
     {
-      "version": "1.5.1",
+      "version": "1.6.0",
+      "min_core_version": "2.5.0",
+      "changelog": "Use the on_song_analyzed worker hook: show a per-run count of analyzed songs (reset by run_id) and the last song's full hook payload under the chart. Runs on both containers now (the hook needs the worker).",
+      "imageUrl": ""
+    },
+    {
+      "version": "1.5.0",
       "min_core_version": "2.5.0",
       "changelog": "Declare the plugin as Flask-only (targets) so worker containers skip its code and matplotlib dependency.",
-      "imageUrl": "",
-      "sourceUrl": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI-plugins/main/dist/song_counter/song_counter_1.5.1.zip",
-      "checksum": "b6498b8a8499486b7448ac55926d09d5"
+      "imageUrl": ""
     }
   ]
 }

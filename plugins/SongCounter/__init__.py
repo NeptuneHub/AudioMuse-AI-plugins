@@ -114,6 +114,17 @@ def _last_song_rows(last):
     return rows
 
 
+def _fmt_value(value):
+    if isinstance(value, dict):
+        return '\n'.join(
+            f'{k}: {v:.4f}' if isinstance(v, float) else f'{k}: {v}'
+            for k, v in value.items()
+        )
+    if isinstance(value, float):
+        return f'{value:.4f}'
+    return str(value)
+
+
 def _hook_html():
     analyzed, last = _hook_stats()
     html_out = (
@@ -125,7 +136,7 @@ def _hook_html():
     detail = ''.join(
         '<tr>'
         f'<td style="padding:.2rem .6rem;border-top:1px solid #ccc;vertical-align:top;"><strong>{html.escape(str(key))}</strong></td>'
-        f'<td style="padding:.2rem .6rem;border-top:1px solid #ccc;word-break:break-word;overflow-wrap:anywhere;">{html.escape(str(value))}</td>'
+        f'<td style="padding:.2rem .6rem;border-top:1px solid #ccc;white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;">{html.escape(_fmt_value(value))}</td>'
         '</tr>'
         for key, value in _last_song_rows(last)
     )

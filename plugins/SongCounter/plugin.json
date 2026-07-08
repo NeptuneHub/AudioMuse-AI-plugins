@@ -7,12 +7,13 @@
     "matplotlib"
   ],
   "versions": [
-      {
+    {
       "version": "1.7.1",
       "min_core_version": "2.5.0",
       "changelog": "Add the index_log cron task: an hourly snapshot of the Musicnn, DCLAP and GTE index sizes, kept to the last 10 rows and shown on the page. Ships disabled; enable it in Scheduled Tasks.",
       "imageUrl": "",
-      "sourceUrl": ""
+      "sourceUrl": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI-plugins/main/dist/song_counter/song_counter_1.7.1.zip",
+      "checksum": "c19b3f21edc9eabb377906dccb8d8c27"
     },
     {
       "version": "1.7.0",

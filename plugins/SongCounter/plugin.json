@@ -3,13 +3,17 @@
   "name": "SongCounter",
   "author": "NeptuneHub",
   "description": "Counts analyzed songs as a bar chart, and uses the on_song_analyzed worker hook to show a per-run count of songs analyzed plus the full hook payload of the last analyzed song.",
-  "requirements": ["matplotlib"],
+  "requirements": [
+    "matplotlib"
+  ],
   "versions": [
     {
       "version": "1.6.1",
       "min_core_version": "2.5.0",
       "changelog": "Fix the last-song detail table overflowing the page: fixed table layout with a pinned key column and wrapping values.",
-      "imageUrl": ""
+      "imageUrl": "",
+      "sourceUrl": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI-plugins/main/dist/song_counter/song_counter_1.6.1.zip",
+      "checksum": "574cbc28b59603edd1772f95fdf5e22f"
     },
     {
       "version": "1.6.0",

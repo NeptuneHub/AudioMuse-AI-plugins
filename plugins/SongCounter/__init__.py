@@ -124,14 +124,16 @@ def _hook_html():
         return html_out + '<p>No song analyzed yet. Start an analysis to watch this update.</p>'
     detail = ''.join(
         '<tr>'
-        f'<td style="padding:.2rem .6rem;border-top:1px solid #ccc;"><strong>{html.escape(str(key))}</strong></td>'
-        f'<td style="padding:.2rem .6rem;border-top:1px solid #ccc;">{html.escape(str(value))}</td>'
+        f'<td style="padding:.2rem .6rem;border-top:1px solid #ccc;vertical-align:top;"><strong>{html.escape(str(key))}</strong></td>'
+        f'<td style="padding:.2rem .6rem;border-top:1px solid #ccc;word-break:break-word;overflow-wrap:anywhere;">{html.escape(str(value))}</td>'
         '</tr>'
         for key, value in _last_song_rows(last)
     )
     return html_out + (
         '<p style="margin-top:1rem;">Last analyzed song (everything the hook passed):</p>'
-        f'<table style="border-collapse:collapse;font-size:.95rem;">{detail}</table>'
+        '<table style="border-collapse:collapse;font-size:.95rem;width:100%;max-width:100%;table-layout:fixed;">'
+        '<colgroup><col style="width:230px"><col></colgroup>'
+        f'{detail}</table>'
     )
 
 

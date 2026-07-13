@@ -6,6 +6,13 @@
       "author": "NeptuneHub",
       "description": "Counts analyzed songs as a bar chart, and uses the on_song_analyzed worker hook to show a per-run count of songs analyzed plus the full hook payload of the last analyzed song.",
       "pluginUrl": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI-plugins/main/plugins/SongCounter/plugin.json"
+    },
+    {
+      "id": "lumae_analysis",
+      "name": "Lumae Analysis",
+      "author": "Lumae",
+      "description": "Companion plugin for the Lumae music app, providing server-side features and AudioMuse-AI integration.",
+      "pluginUrl": "https://raw.githubusercontent.com/rendyhd/lumae-plugin/main/plugins/LumaeAnalysis/plugin.json"
     }
   ]
 }

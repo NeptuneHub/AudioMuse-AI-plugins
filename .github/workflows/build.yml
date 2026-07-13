@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Build zips, fill plugin.json, and the catalog
+      - name: Build zips and fill plugin.json
         env:
           REPO: ${{ github.repository }}
           BRANCH: ${{ github.ref_name }}
@@ -76,7 +76,6 @@ jobs:
                       with open(full, "rb") as fh:
                           z.writestr(info, fh.read())
 
-          catalog = []
           for folder in sorted(os.listdir(plugins_dir)):
               meta_path = os.path.join(plugins_dir, folder, "plugin.json")
               if not os.path.isfile(meta_path):
@@ -103,28 +102,21 @@ jobs:
               meta["versions"] = versions
               write_json(meta_path, meta)
 
-              catalog.append({
-                  "id": pid,
-                  "name": meta.get("name", pid),
-                  "author": meta.get("author", ""),
-                  "description": meta.get("description", ""),
-                  "pluginUrl": f"{raw}/{plugins_dir}/{folder}/plugin.json",
-              })
               print(f"built {zip_name} (md5 {checksum}); updated {meta_path}")
 
-          catalog.sort(key=lambda e: e["id"])
-          write_json("manifest.json", {"plugins": catalog})
-          print(f"updated manifest.json (catalog) with {len(catalog)} plugin(s)")
+          # manifest.json is intentionally NOT generated or modified here.
+          # It is maintained by hand and must never be touched by CI.
           PY
 
-      - name: Commit catalog, zips, and updated plugin.json files
+      - name: Commit zips and updated plugin.json files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add dist plugins manifest.json
+          # Stage only build outputs and plugin metadata. manifest.json is never staged.
+          git add dist plugins
           if git diff --cached --quiet; then
-            echo "Catalog already up to date; nothing to commit."
+            echo "Build outputs already up to date; nothing to commit."
           else
-            git commit -m "Build plugin catalog [skip ci]"
+            git commit -m "Build plugin zips and update plugin.json [skip ci]"
             git push
           fi

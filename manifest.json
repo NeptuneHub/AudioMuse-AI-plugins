@@ -13,6 +13,13 @@
       "author": "Lumae",
       "description": "Companion plugin for the Lumae music app, providing server-side features and AudioMuse-AI integration.",
       "pluginUrl": "https://raw.githubusercontent.com/rendyhd/lumae-plugin/main/plugins/LumaeAnalysis/plugin.json"
+    },
+    {
+      "id": "playlist_curator",
+      "name": "Playlist Curator",
+      "author": "Lumae",
+      "description": "Includes Smart Search and Playlist Expander for discovering, extending, previewing, deduplicating, and saving playlists.",
+      "pluginUrl": "https://raw.githubusercontent.com/rendyhd/audiomuse-ai-playlist-extender/main/plugins/PlaylistCurator/plugin.json"
     }
   ]
 }

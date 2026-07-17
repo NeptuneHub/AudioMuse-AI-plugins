@@ -26,7 +26,7 @@
       "name": "SpectrumAnalyzer",
       "author": "T.N.Nguyen",
       "description": "Spectrum analysis and fake-lossless detection with per-song spectrograms.",
-      "pluginUrl": "https://raw.githubusercontent.com/nguyentn1197/audiomuse-ai-spectrum-analyzer-plugin/refs/heads/main/plugins/SpectrumAnalyzer/plugin.json"
+      "pluginUrl": "https://raw.githubusercontent.com/nguyentn1197/audiomuse-ai-spectrum-analyzer-plugin/main/plugins/SpectrumAnalyzer/plugin.json"
     }
   ]
 }

@@ -15,13 +15,6 @@
       "pluginUrl": "https://raw.githubusercontent.com/rendyhd/lumae-plugin/main/plugins/LumaeAnalysis/plugin.json"
     },
     {
-      "id": "playlist_curator",
-      "name": "Playlist Curator",
-      "author": "Lumae",
-      "description": "Includes Smart Search and Playlist Expander for discovering, extending, previewing, deduplicating, and saving playlists.",
-      "pluginUrl": "https://raw.githubusercontent.com/rendyhd/audiomuse-ai-playlist-extender/main/plugins/PlaylistCurator/plugin.json"
-    },
-    {
       "id": "spectrum_analyzer",
       "name": "SpectrumAnalyzer",
       "author": "T.N.Nguyen",

@@ -20,6 +20,13 @@
       "author": "T.N.Nguyen",
       "description": "Spectrum analysis and fake-lossless detection with per-song spectrograms.",
       "pluginUrl": "https://raw.githubusercontent.com/nguyentn1197/audiomuse-ai-spectrum-analyzer-plugin/main/plugins/SpectrumAnalyzer/plugin.json"
+    },
+    {
+      "id": "rocm_accelerator",
+      "name": "AMD GPU Hardware Acceleration",
+      "author": "Schaka",
+      "description": "Requires the AudioMuse-AI ROCm worker image; inert on other images. Runs musicnn and the CLAP audio encoder on the AMD GPU via ONNX Runtime's MIGraphX provider, and swaps lyrics ASR to a GPU-backed engine (faster-whisper/CTranslate2, whisper.cpp, or parakeet.cpp) instead of the built-in ONNX Whisper. Per-arch profiles handle generation differences (fp16, blocked backends, etc). Docs: https://github.com/Schaka/audiomuse-rocm-plugin/blob/main/plugin/rocm_accelerator/README.md",
+      "pluginUrl": "https://github.com/Schaka/audiomuse-rocm-plugin/releases/latest/download/plugin.json"
     }
   ]
 }

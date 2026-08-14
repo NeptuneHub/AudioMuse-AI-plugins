@@ -27,6 +27,13 @@
       "author": "Schaka",
       "description": "Requires the AudioMuse-AI ROCm worker image; inert on other images. Runs musicnn and the CLAP audio encoder on the AMD GPU via ONNX Runtime's MIGraphX provider, and swaps lyrics ASR to a GPU-backed engine (faster-whisper/CTranslate2, whisper.cpp, or parakeet.cpp) instead of the built-in ONNX Whisper. Per-arch profiles handle generation differences (fp16, blocked backends, etc). Docs: https://github.com/Schaka/audiomuse-rocm-plugin/blob/main/plugin/rocm_accelerator/README.md",
       "pluginUrl": "https://github.com/Schaka/audiomuse-rocm-plugin/releases/latest/download/plugin.json"
+    },
+    {
+      "id": "per_user_sonic_fingerprint",
+      "name": "Per-User Sonic Fingerprint",
+      "author": "GoosePod",
+      "description": "Refreshes a separate Sonic Fingerprint playlist for each configured Navidrome user on a schedule.",
+      "pluginUrl": "https://raw.githubusercontent.com/goosepod/audiomuse-fingerprint-plugin/main/plugin.json"
     }
   ]
 }

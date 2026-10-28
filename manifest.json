@@ -34,6 +34,13 @@
       "author": "GoosePod",
       "description": "Refreshes a separate Sonic Fingerprint playlist for each configured Navidrome user on a schedule.",
       "pluginUrl": "https://raw.githubusercontent.com/goosepod/audiomuse-fingerprint-plugin/main/plugin.json"
+    },
+    {
+      "id": "playlist_genre_filter",
+      "name": "Playlist Genre Filter",
+      "author": "billraff",
+      "description": "Removes tracks of genres you choose (for example Christmas or Classical), or whose album title or file path matches a word you choose, from the playlists clustering creates. Navidrome only for now.",
+      "pluginUrl": "https://raw.githubusercontent.com/billraff/audiomuse-genre-filter/main/plugins/PlaylistGenreFilter/plugin.json"
     }
   ]
 }

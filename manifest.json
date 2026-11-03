@@ -11,7 +11,7 @@
       "id": "lumae_analysis",
       "name": "Lumae Analysis",
       "author": "Lumae",
-      "description": "Companion plugin for the Lumae music app, providing server-side features and AudioMuse-AI integration.",
+      "description": "Companion plugin for Lumae Music (https://lumaemusic.app), providing additional analysis and client sync.",
       "pluginUrl": "https://raw.githubusercontent.com/rendyhd/lumae-plugin/main/plugins/LumaeAnalysis/plugin.json"
     },
     {

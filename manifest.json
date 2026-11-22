@@ -41,6 +41,13 @@
       "author": "billraff",
       "description": "Removes tracks of genres you choose (for example Christmas or Classical), or whose album title or file path matches a word you choose, from the playlists clustering creates. Navidrome only for now.",
       "pluginUrl": "https://raw.githubusercontent.com/billraff/audiomuse-genre-filter/main/plugins/PlaylistGenreFilter/plugin.json"
+    },
+    {
+      "id": "analysis_excluder",
+      "name": "Analysis Blocklist",
+      "author": "alghostzx",
+      "description": "Excludes tracks matching Title, Album, Artist, Filename/Path, or Genre regex patterns from AI analysis, purges already-analyzed matching tracks from the vector database, and unblocks tracks when filters are relaxed.",
+      "pluginUrl": "https://raw.githubusercontent.com/alghostzx/AudioMuse-Analysis-Excluder/main/plugins/AnalysisExcluder/plugin.json"
     }
   ]
 }
